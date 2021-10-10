@@ -4,7 +4,7 @@ import 'package:hacktoberapp/app/shared/models/user.dart';
 import 'package:hacktoberapp/app/shared/network/hacktoberapp/hacktoberapp_client.dart';
 
 class HacktoberappApi {
-  HacktoberappClient _client;
+  late HacktoberappClient _client;
   Dio _dio = Modular.get();
 
   HacktoberappApi() {

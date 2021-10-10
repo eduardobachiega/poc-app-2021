@@ -11,23 +11,18 @@ import 'package:hacktoberapp/app/modules/home/home_module.dart';
 
 import 'shared/network/api.dart';
 
-class AppModule extends MainModule {
+class AppModule extends Module {
   @override
-  List<Bind> get binds => [
-        $AppController,
-        Bind((i) => Dio()),
-        Bind((i) => HacktoberappApi()),
-        Bind((i) => Api()),
-        Bind<IUserRepository>((i) => UserRepository()),
-      ];
+  final List<Bind> binds = [
+    $AppController,
+    Bind((i) => Dio()),
+    Bind((i) => HacktoberappApi()),
+    Bind((i) => Api()),
+    Bind<IUserRepository>((i) => UserRepository()),
+  ];
 
   @override
-  List<ModularRouter> get routers => [
-        ModularRouter(Modular.initialRoute, module: HomeModule()),
-      ];
-
-  @override
-  Widget get bootstrap => AppWidget();
-
-  static Inject get to => Inject<AppModule>.of();
+  final List<ModularRoute> routes = [
+    ModuleRoute(Modular.initialRoute, module: HomeModule()),
+  ];
 }

@@ -12,7 +12,7 @@ import 'package:hacktoberapp/app/shared/constants/colors.dart' as AppColors;
 class HomePage extends StatefulWidget {
   final String title;
 
-  const HomePage({Key key, this.title = "Home"}) : super(key: key);
+  const HomePage({Key? key, this.title = "Home"}) : super(key: key);
 
   @override
   _HomePageState createState() => _HomePageState();
@@ -63,7 +63,9 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
                       return Text(
                         controller.user == null
                             ? "0/4"
-                            : "${controller.user.prs.length}/4",
+                            : controller.user!.prs == null
+                        ? "0/4"
+                        : "${controller.user!.prs!.length}/4",
                         style: TextStyle(
                             fontSize: 50, fontWeight: FontWeight.bold),
                       );
@@ -77,7 +79,7 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
                                 width: 100,
                               )
                             : CircleImageView(
-                                imagePath: controller.user.userImage,
+                                imagePath: controller.user!.userImage,
                                 height: 100,
                                 width: 100,
                                 network: true,
