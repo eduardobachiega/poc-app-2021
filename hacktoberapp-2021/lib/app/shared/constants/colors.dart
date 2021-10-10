@@ -11,6 +11,7 @@ const Color PRIMARY_COLOR_DARK = Color(0xFF677662);
 const Color DISABLED_BUTTON_COLOR = Color(0x50FFEC00);
 const Color TRANSPARENT = Colors.transparent;
 const Color ORANGE = Color(0xFFf74700);
+const Color SPLASH_BK = Color(0xFF2b3632);
 
 // library app_colors;
 //
