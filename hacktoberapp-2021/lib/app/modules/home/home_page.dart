@@ -30,7 +30,7 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
           Container(
             color: AppColors.PRIMARY_COLOR,
             child: Padding(
-              padding: EdgeInsets.all(20.0),
+              padding: EdgeInsets.fromLTRB(0.0, 40.0, 0.0, 20.0),
               child: Image.asset("hacktober.png"),
             ),
           ),
@@ -67,7 +67,7 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
                         ? "0/4"
                         : "${controller.user!.prs!.length}/4",
                         style: TextStyle(
-                            fontSize: 50, fontWeight: FontWeight.bold),
+                            fontSize: 50, fontWeight: FontWeight.bold, color: AppColors.ACCENT_COLOR),
                       );
                     }),
                     Observer(
