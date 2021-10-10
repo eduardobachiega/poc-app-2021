@@ -5,15 +5,15 @@ import 'package:flutter/widgets.dart';
 import 'package:hacktoberapp/app/shared/constants/colors.dart' as AppColors;
 
 class CircleImageView extends StatefulWidget {
-  final String imagePath;
+  final String? imagePath;
   final double width;
   final double height;
   final BoxFit fit;
   final bool network;
   final Color backgroundColor;
-  final VoidCallback onTap;
-  final File file;
-  final IconData icon;
+  final VoidCallback? onTap;
+  final File? file;
+  final IconData? icon;
 
   CircleImageView({
     this.imagePath,
@@ -34,15 +34,15 @@ class CircleImageView extends StatefulWidget {
 class _CircleImageViewPageState extends State<CircleImageView> {
   @override
   Widget build(BuildContext context) {
-    Image image;
+    Image? image;
     if (widget.icon == null) {
       if (widget.imagePath != null) {
         if (widget.network)
-          image = Image.network(widget.imagePath);
+          image = Image.network(widget.imagePath!);
         else
-          image = Image.asset(widget.imagePath);
+          image = Image.asset(widget.imagePath!);
       } else if (widget.file != null) {
-        image = Image.file(widget.file);
+        image = Image.file(widget.file!);
       }
     }
 

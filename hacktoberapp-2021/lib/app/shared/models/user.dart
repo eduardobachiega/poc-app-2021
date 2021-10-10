@@ -4,9 +4,9 @@ part 'user.g.dart';
 
 @JsonSerializable()
 class User {
-  String username;
-  String userImage;
-  List<dynamic> prs;
+  String? username;
+  String? userImage;
+  List<dynamic>? prs;
 
   User({
     this.userImage,

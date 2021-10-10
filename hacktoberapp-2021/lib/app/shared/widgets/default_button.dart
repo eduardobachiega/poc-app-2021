@@ -3,14 +3,14 @@ import 'package:hacktoberapp/app/shared/constants/colors.dart' as AppColors;
 
 class DefaultButton extends StatelessWidget {
   final String text;
-  final VoidCallback onPressed;
+  final VoidCallback? onPressed;
   final double height;
   final double minWidth;
   final bool enabled;
 
   const DefaultButton(
-      {Key key,
-        this.text,
+      {Key? key,
+        this.text = "",
         this.height = 60.0,
         this.onPressed,
         this.enabled = true,
@@ -40,9 +40,9 @@ class DefaultButton extends StatelessWidget {
           child: ButtonTheme(
             height: height,
             minWidth: minWidth,
-            child: FlatButton(
+            child: MaterialButton(
               onPressed: () {
-                if (enabled) onPressed();
+                if (enabled) if (onPressed != null) onPressed!();
               },
               child: Text(
                 text,

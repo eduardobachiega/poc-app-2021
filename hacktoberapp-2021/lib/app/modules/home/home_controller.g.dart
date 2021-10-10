@@ -8,8 +8,8 @@ part of 'home_controller.dart';
 
 final $HomeController = BindInject(
   (i) => HomeController(),
-  singleton: true,
-  lazy: true,
+  isSingleton: true,
+  isLazy: true,
 );
 
 // **************************************************************************
@@ -22,13 +22,13 @@ mixin _$HomeController on _HomeControllerBase, Store {
   final _$userAtom = Atom(name: '_HomeControllerBase.user');
 
   @override
-  User get user {
+  User? get user {
     _$userAtom.reportRead();
     return super.user;
   }
 
   @override
-  set user(User value) {
+  set user(User? value) {
     _$userAtom.reportWrite(value, super.user, () {
       super.user = value;
     });

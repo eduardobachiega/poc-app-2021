@@ -7,7 +7,6 @@ class AppWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      navigatorKey: Modular.navigatorKey,
       title: 'HacktoberApp',
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -15,7 +14,6 @@ class AppWidget extends StatelessWidget {
         accentColor: AppColors.ACCENT_COLOR,
       ),
       initialRoute: '/',
-      onGenerateRoute: Modular.generateRoute,
-    );
+    ).modular();
   }
 }

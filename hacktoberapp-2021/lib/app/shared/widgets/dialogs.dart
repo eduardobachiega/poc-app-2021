@@ -3,14 +3,14 @@ import 'package:hacktoberapp/app/shared/constants/colors.dart' as AppColors;
 import 'default_button.dart';
 
 class Dialogs extends StatelessWidget {
-  final VoidCallback positiveButtonOnPressed;
-  final VoidCallback negativeButtonOnPressed;
+  final VoidCallback? positiveButtonOnPressed;
+  final VoidCallback? negativeButtonOnPressed;
   final dynamic title;
   final dynamic text;
   final dynamic positiveButtonText;
   final dynamic negativeButtonText;
   final Widget complement;
-  final double widthDialog;
+  final double? widthDialog;
   final bool positiveButtonCallPop;
   final bool negativeButtonCallPop;
 
@@ -92,7 +92,7 @@ class Dialogs extends StatelessWidget {
         height: 40,
         text: positiveButtonText,
         onPressed: () {
-          if (positiveButtonOnPressed != null) positiveButtonOnPressed();
+          if (positiveButtonOnPressed != null) positiveButtonOnPressed!();
           if (positiveButtonCallPop) Navigator.pop(context);
         });
   }
@@ -102,7 +102,7 @@ class Dialogs extends StatelessWidget {
         height: 40,
         text: negativeButtonText,
         onPressed: () {
-          if (negativeButtonOnPressed != null) negativeButtonOnPressed();
+          if (negativeButtonOnPressed != null) negativeButtonOnPressed!();
           if (negativeButtonCallPop) Navigator.pop(context);
         });
   }
