@@ -4,12 +4,13 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
-const Color ACCENT_COLOR = Color(0xFF074cfe);
+const Color ACCENT_COLOR = Color(0xFFf4f0e1);
 const Color WHITE = Color(0xFFFFFFFF);
-const Color PRIMARY_COLOR = Color(0xFF142d4a);
-const Color PRIMARY_COLOR_DARK = Color(0xFF0a1b31);
+const Color PRIMARY_COLOR = Color(0xFFf4f0e1);
+const Color PRIMARY_COLOR_DARK = Color(0xFF677662);
 const Color DISABLED_BUTTON_COLOR = Color(0x50FFEC00);
 const Color TRANSPARENT = Colors.transparent;
+const Color ORANGE = Color(0xFFf74700);
 
 // library app_colors;
 //
